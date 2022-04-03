@@ -7,6 +7,7 @@ import { EventListenerFocusTrapInertStrategy } from '@angular/cdk/a11y';
 })
 export class UserService {
 
+  //TODO: Use original WEB API as baseURL
   baseUrl: string = 'https://my-json-server.typicode.com/sunsiva/AnthologyMemberInfo/';
   constructor(private http: HttpClient) {}
    
@@ -20,4 +21,12 @@ export class UserService {
        return this.http.get(this.baseUrl + 'users/'+id);
     }
    
+    addUser(userObj: any)
+    {
+      return this.http.post(this.baseUrl + 'users', userObj);
+    }
+
+    deleteUser(id: any){
+      return this.http.delete(this.baseUrl + 'users/'+id);
+    }
 }

@@ -1,1 +1,43 @@
-<p>add-user works!</p>
+<mat-card>
+    <mat-card-title>Create User</mat-card-title>
+    <mat-card-content>
+<form [formGroup]="addUserForm" (submit)="CreateUser()">
+
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="First Name" formControlName="fname">
+          </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Middle Name</mat-label>
+            <input matInput placeholder="Middle Name" formControlName="mname">
+          </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Last Name" formControlName="lname">
+          </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Age</mat-label>
+            <input placeholder="Age" formControlName="age">
+          </mat-form-field>
+    </p>
+    <p>
+        <label>Gender: </label>
+        <mat-form-field appearance="outline">
+            <mat-label>Gender</mat-label>
+            <input type="radio" selected value="Male" name="gender"> Male
+            <input type="radio" value="Female" name="gender"> Female
+          </mat-form-field>
+    </p>
+    <p>
+        <button mat-raised-button color="primary">Create</button>
+    </p>
+</form>
+</mat-card-content>
+</mat-card>
