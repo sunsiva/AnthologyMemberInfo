@@ -1,0 +1,12 @@
+{
+  "profile": [
+    {
+      "id": 1,
+      "fname": "siv",
+      "lname": "sun",
+      "mname": "s",
+      "age": "1",
+      "gender": "M"
+    }
+  ]
+}
