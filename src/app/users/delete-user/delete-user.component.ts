@@ -11,6 +11,7 @@ import { UserService } from 'src/app/services/user.service';
 export class DeleteUserComponent implements OnInit {
 
   userId: string ='';
+  userDetails:any;
   constructor(private activatedRoute: ActivatedRoute, private userService: UserService, 
     private _snakeBar: MatSnackBar,
     private router: Router ) { }
@@ -18,7 +19,13 @@ export class DeleteUserComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(data => {
       this.userId=data['id'];
+
+      this.userService.viewUser(this.userId).subscribe(data =>{
+        this.userDetails = data;
+      })
     });
+
+      
 
     if(this.userId){
       this.userService.deleteUser(this.userId).subscribe(data =>{

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { EventListenerFocusTrapInertStrategy } from '@angular/cdk/a11y';
-
+import { Users } from '../users/list-users/list-users.component';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,9 +12,9 @@ export class UserService {
   baseUrl: string = 'https://my-json-server.typicode.com/sunsiva/AnthologyMemberInfo/';
   constructor(private http: HttpClient) {}
    
-  listUsers()
+  listUsers():Observable<Users[]>  
     {
-        return this.http.get(this.baseUrl+'users');
+        return this.http.get<Users[]>(this.baseUrl+'users');
     }
 
     viewUser(id:string)
@@ -28,5 +29,10 @@ export class UserService {
 
     deleteUser(id: any){
       return this.http.delete(this.baseUrl + 'users/'+id);
+    }
+
+    updateUser(id: any, userObj: any)
+    {
+      return this.http.put(this.baseUrl + 'users/'+id, userObj);
     }
 }

@@ -12,6 +12,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS} from '@angular/material/snack-bar';
+import { MatFormFieldControl } from '@angular/material/form-field';
+import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     ListUsersComponent,
@@ -28,7 +30,8 @@ import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS} from '@angular/materia
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTableModule
   ],
   providers:[{
     provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2500}

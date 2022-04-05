@@ -1,1 +1,26 @@
-<p>edit-user works!</p>
+<mat-card>
+    <mat-card-title>Edit User</mat-card-title>
+<div *ngIf="dataLoaded">
+<form [formGroup]="editUserForm"  class="edit-form-content" (submit)="updateUser()">
+    <p>
+        <input placeholder="First Name" formControlName="fname">
+    </p>
+    <p>
+        <input placeholder="Middle Name" formControlName="mname">
+    </p>
+    <p>
+        <input placeholder="Last Name" formControlName="lname">
+    </p>
+    <p>
+        <input placeholder="Age" formControlName="age">
+    </p>
+    <p>
+        <label>Gender: </label>
+        <input type="radio" selected value="Male" name="gender"> Male
+        <input type="radio" value="Female" name="gender"> Female
+    <p>
+        <button mat-raised-button color="primary">Update</button>
+    </p>    
+</form>
+</div>
+</mat-card>
