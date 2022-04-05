@@ -1,4 +1,4 @@
-# Admin
+# User Admin
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 
@@ -8,8 +8,16 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build` to build the project.
 
-## Further help
+## Database
+Used JSON Server Fake API for CRUD operation. The DB is db.json in the Github Repo.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Angular Crud Operations
+#Operations
+Create
+Read
+Update
+Delete
+
+@Developed For Anthology as part of an Assessment Excercise.
