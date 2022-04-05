@@ -1,6 +1,6 @@
 # User Admin
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1 from Visual Studio Code editor.
 
 ## Development server
 
@@ -27,4 +27,4 @@ npm install -g @angular/cli
 #Install JSON Server for db.json
 npm install -g json-server
 
-@Developed For Anthology as part of an Assessment Excercise.
+@Developed for Anthology as part of an Assessment Excercise.
