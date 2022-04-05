@@ -12,12 +12,19 @@ Run `ng build` to build the project.
 
 ## Database
 Used JSON Server Fake API for CRUD operation. The DB is db.json in the Github Repo.
+https://my-json-server.typicode.com/sunsiva/AnthologyMemberInfo/users
 
 ## Angular Crud Operations
-#Operations
-Create
-Read
-Update
-Delete
+
+1. Create
+2. Read
+3. Update
+4. Delete
+
+## Pre-requisite for Build the project
+npm install -g @angular/cli
+
+#Install JSON Server for db.json
+npm install -g json-server
 
 @Developed For Anthology as part of an Assessment Excercise.
